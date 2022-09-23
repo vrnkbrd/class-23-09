@@ -28,3 +28,34 @@ public class Solution {
   }
 }
 Actually there is the same algorithm but the autor used streams and it seems interesting
+
+Diff: 6 
+
+Task: Given an array of integers, find the one that appears an odd number of times.
+
+There will always be only one integer that appears an odd number of times.
+
+My solution: 
+public class FindOdd {
+	public static int findIt(int[] a) {
+    int odd=0;
+    int[]b=new int[a.length];
+    for (int i=0; i<a.length; i++){
+      for (int j=0; j<a.length; j++){
+        if (a[i]==a[j]) b[i]=b[i]+1;
+      }
+    }
+    for (int k=0; k<b.length; k++){
+      if (b[k]%2==1) odd=a[k];
+    }
+  	return odd;
+  }
+}
+Fav solution:
+import static java.util.Arrays.stream;
+
+public class FindOdd {
+  public static int findIt(int[] arr) {
+    return stream(arr).reduce(0, (x, y) -> x ^ y);
+  }
+}
