@@ -37,7 +37,7 @@ Actually there is the same algorithm but the autor used streams and it seems int
 
  
 
-#### Task 2. 
+##### Task 2. 
 ### Task 6 kyu: 
 Given an array of integers, find the one that appears an odd number of times.
 There will always be only one integer that appears an odd number of times.
